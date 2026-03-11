@@ -10,6 +10,7 @@ namespace CupacPoligon
     {
         static void Main(string[] args)
         {
+            //Stefan Cupać
         }
     }
 }
