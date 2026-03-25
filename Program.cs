@@ -25,6 +25,7 @@ namespace CupacPoligon
             */
             Poligon drugi = Poligon.ucitaj();
             drugi.stampa();
+            Console.ReadKey();
         }
     }
 }
