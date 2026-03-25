@@ -18,8 +18,13 @@ namespace CupacPoligon
             vektor AB = new vektor(A, B);
             AB.stampaj();
             */
+            /*
             Poligon prvi = Poligon.unos();
             prvi.stampa();
+            prvi.snimi();
+            */
+            Poligon drugi = Poligon.ucitaj();
+            drugi.stampa();
         }
     }
 }
