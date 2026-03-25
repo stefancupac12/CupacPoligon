@@ -8,8 +8,8 @@ namespace CupacPoligon
 {
     internal class tacka
     {
-        double x;
-        double y;
+        public double x;
+        public double y;
         public double d()
         {
             return Math.Sqrt(x * x + y * y);
