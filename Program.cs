@@ -10,6 +10,7 @@ namespace CupacPoligon
     {
         static void Main(string[] args)
         {
+            //Stefan Cupac
             /*
             tacka A = new tacka(2, 3);
             tacka B = new tacka(4, 5);
