@@ -24,9 +24,16 @@ namespace CupacPoligon
             prvi.stampa();
             prvi.snimi();
             */
-            Poligon drugi = Poligon.ucitaj();
-            drugi.stampa();
-            Console.ReadKey();
+            //Poligon drugi = Poligon.ucitaj();
+            //drugi.stampa();
+            //Console.ReadKey();
+            tacka A = new tacka(1, 1);
+            tacka B = new tacka(5, 1);
+            tacka C = new tacka(2, 6);
+            tacka D = new tacka(2, 1);
+            vektor AB = new vektor(A, B);
+            vektor CD = new vektor(C, D);
+            Console.WriteLine(AB.sece(CD));
         }
     }
 }

@@ -43,5 +43,12 @@ namespace CupacPoligon
             tacka druga = this.centriraj();
             return druga.d();
         }
+        public bool sece(vektor b)
+        {
+            int x = ravan.SIS(this, b.pocetak, b.kraj);
+            int y = ravan.SIS(b, this.pocetak, this.kraj);
+            if (x * y != 0) return true;
+            else return false;
+        }
     }
 }

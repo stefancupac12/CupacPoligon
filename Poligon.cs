@@ -79,5 +79,35 @@ namespace CupacPoligon
             obim += a.duzina();
             return obim;
         }
+        public bool prost()
+        {
+            for (int i = 0; i < br_temena - 1; i++)
+            {
+                for (int j = i + 1; j < br_temena; j++)
+                {
+                    if (tacka.iste(teme[i], teme[j])) return false;
+                }
+            }
+            vektor[] stranica = new vektor[br_temena];
+            // napravim stranice
+            for (int i = 0; i < br_temena - 2; i++)
+            {
+                int kraj = br_temena;
+                if (i == 0) kraj = br_temena - 1;
+                for (int j = i + 2; j < kraj; j++)
+                {
+                    if (stranica[i].sece(stranica[j])) return false;
+                }
+            }
+            return true;
+        }
+        public bool konveksan()
+        {
+            return true;
+        }
+        public double povrsina()
+        {
+            return 0;
+        }
     }
 }
