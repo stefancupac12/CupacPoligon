@@ -103,7 +103,16 @@ namespace CupacPoligon
         }
         public bool konveksan()
         {
-            return true;
+            int t = 0;
+            for (int i = 0; i< br_temena; i++)
+            {
+                vektor prvi = new vektor(teme[i], teme[(i +  1)%br_temena]);
+                vektor drugi = new vektor(teme[(i + 1)% br_temena], teme[(i + 2)%br_temena]);
+                if (vektor.VP(prvi, drugi) > 0) t++;
+            }
+            if ((t == br_temena) || (t == 0)) return true;
+            
+            return false;
         }
         public double povrsina()
         {
