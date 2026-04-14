@@ -111,12 +111,20 @@ namespace CupacPoligon
                 if (vektor.VP(prvi, drugi) > 0) t++;
             }
             if ((t == br_temena) || (t == 0)) return true;
-            
             return false;
         }
         public double povrsina()
         {
-            return 0;
+            {
+                double plus = 0;
+                double minus = 0;
+                for (int i = 0; i < br_temena; i++)
+                {
+                    plus += teme[i].x * teme[(i + 1) % br_temena].y;
+                    minus += teme[i].y * teme[(i + 1) % br_temena].x;
+                }
+                return Math.Abs(plus - minus) / 2;
+            }
         }
     }
 }

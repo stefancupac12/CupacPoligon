@@ -37,7 +37,10 @@ namespace CupacPoligon
             Console.WriteLine(AB.sece(CD));
             */
             Poligon prvi = Poligon.unos();
-            Console.WriteLine(prvi.konveksan());
+            Console.WriteLine(prvi.povrsina());
+            // if (prvi.prost())
+            //    Console.WriteLine(prvi.povrsina());
+            // else Console.WriteLine("nije prost");
         }
     }
 }

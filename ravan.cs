@@ -15,9 +15,9 @@ namespace CupacPoligon
             vektor AC = new vektor(a.pocetak, c);
             double aAB = vektor.VP(a, AB);
             double aAC = vektor.VP(a, AC);
-            if (aAC * aAB > 0) return 1;  //sa iste
+            if (aAC * aAB > 0) return 0;  //sa iste
             if (aAC * aAB < 0) return -1;  //razne strane
-            return 0;  //jedna tacka lezi na vektoru
+            return 1;  //jedna tacka lezi na vektoru
         }
     }
 }
