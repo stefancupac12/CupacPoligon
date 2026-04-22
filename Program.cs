@@ -45,11 +45,11 @@ namespace CupacPoligon
             */
             tacka a = new tacka(1, 3);
             tacka b = new tacka(1, 1);
+            tacka c = new tacka(5, 1);
+            tacka d = new tacka(5, 3);
             vektor AB = new vektor(a, b);
-            tacka c = new tacka(4, 0);
-            tacka d = new tacka(3, 3);
             vektor CD = new vektor(c, d);
-            vektor DA = new vektor(d, d);
+            vektor DA = new vektor(d, a);
             vektor BC = new vektor(b, c);
             
             double ab_len = AB.duzina();
@@ -63,6 +63,26 @@ namespace CupacPoligon
                 else Console.WriteLine("nije kvadrat");
             else Console.WriteLine("nije kvadrat");
 
+            if ((ab_len == cd_len) && (bc_len == da_len))
+            {
+                if (vektor.SP(AB, BC) == 0)
+                {
+                    Console.WriteLine("jeste pravougaonik");
+                }
+                else Console.WriteLine("nije pravougaonik");
+            }
+            else Console.WriteLine("nije pravougaonik");
+            
+            if ((ab_len == da_len) && (bc_len == cd_len))
+            {
+                Console.WriteLine("jeste deltoid: ab=da");
+            }
+            else
+            if ((ab_len == bc_len) && (cd_len == da_len))
+            {
+                Console.WriteLine("Jeste deltoid AB=BC");
+            }
+            else Console.WriteLine("nije deltoid"); ;
         }
     }
 }
