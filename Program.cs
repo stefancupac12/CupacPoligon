@@ -36,11 +36,33 @@ namespace CupacPoligon
             vektor CD = new vektor(C, D);
             Console.WriteLine(AB.sece(CD));
             */
+            /*
             Poligon prvi = Poligon.unos();
             Console.WriteLine(prvi.povrsina());
             // if (prvi.prost())
             //    Console.WriteLine(prvi.povrsina());
             // else Console.WriteLine("nije prost");
+            */
+            tacka a = new tacka(1, 3);
+            tacka b = new tacka(1, 1);
+            vektor AB = new vektor(a, b);
+            tacka c = new tacka(4, 0);
+            tacka d = new tacka(3, 3);
+            vektor CD = new vektor(c, d);
+            vektor DA = new vektor(d, d);
+            vektor BC = new vektor(b, c);
+            
+            double ab_len = AB.duzina();
+            double bc_len = BC.duzina();
+            double cd_len = CD.duzina();
+            double da_len = DA.duzina();
+            
+            if ((ab_len == bc_len) && (bc_len == cd_len) && (cd_len == da_len))
+                if (vektor.SP(AB, BC) == 0)
+                    Console.WriteLine("jeste kvadrat");
+                else Console.WriteLine("nije kvadrat");
+            else Console.WriteLine("nije kvadrat");
+
         }
     }
 }

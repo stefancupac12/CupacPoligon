@@ -125,6 +125,7 @@ namespace CupacPoligon
                 }
                 return Math.Abs(plus - minus) / 2;
             }
+
         }
     }
 }
