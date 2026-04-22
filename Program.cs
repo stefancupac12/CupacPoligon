@@ -47,6 +47,7 @@ namespace CupacPoligon
             tacka b = new tacka(1, 1);
             tacka c = new tacka(5, 1);
             tacka d = new tacka(5, 3);
+
             vektor AB = new vektor(a, b);
             vektor CD = new vektor(c, d);
             vektor DA = new vektor(d, a);
@@ -75,14 +76,14 @@ namespace CupacPoligon
             
             if ((ab_len == da_len) && (bc_len == cd_len))
             {
-                Console.WriteLine("jeste deltoid: ab=da");
+                Console.WriteLine("jeste deltoid: AB=DA");
             }
             else
             if ((ab_len == bc_len) && (cd_len == da_len))
             {
                 Console.WriteLine("Jeste deltoid AB=BC");
             }
-            else Console.WriteLine("nije deltoid"); ;
+            else Console.WriteLine("nije deltoid");
         }
     }
 }
