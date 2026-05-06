@@ -43,10 +43,10 @@ namespace CupacPoligon
             //    Console.WriteLine(prvi.povrsina());
             // else Console.WriteLine("nije prost");
             */
-            tacka a = new tacka(1, 3);
-            tacka b = new tacka(1, 1);
-            tacka c = new tacka(5, 1);
-            tacka d = new tacka(5, 3);
+            tacka a = new tacka(1, 1);
+            tacka b = new tacka(3, 1);
+            tacka c = new tacka(3, 5);
+            tacka d = new tacka(1, 2);
 
             vektor AB = new vektor(a, b);
             vektor CD = new vektor(c, d);
@@ -84,6 +84,28 @@ namespace CupacPoligon
                 Console.WriteLine("Jeste deltoid AB=BC");
             }
             else Console.WriteLine("nije deltoid");
+            if (vektor.VP(AB, CD) == 0)
+            {
+                if ((vektor.SP(AB, BC) == 0 && vektor.SP(BC, CD) == 0 && vektor.SP(CD, DA) != 0) ||
+                    (vektor.SP(CD, DA) == 0 && vektor.SP(DA, AB) == 0 && vektor.SP(AB, BC) != 0))
+                {
+                    Console.WriteLine("Jeste pravougli trapez");
+                }
+                else Console.WriteLine("Nije pravougli trapez");
+            }
+            else if (vektor.VP(BC, DA) == 0)
+            {
+                if ((vektor.SP(BC, AB) == 0 && vektor.SP(AB, DA) == 0 && vektor.SP(DA, CD) != 0) ||
+                    (vektor.SP(DA, CD) == 0 && vektor.SP(CD, BC) == 0 && vektor.SP(BC, AB) != 0))
+                {
+                    Console.WriteLine("Jeste pravougli trapez ");
+                }
+                else Console.WriteLine("Nije pravougli trapez");
+            }
+            else
+            {
+                Console.WriteLine("Nije pravougli trapez");
+            }
         }
     }
 }
