@@ -46,7 +46,7 @@ namespace CupacPoligon
             tacka a = new tacka(1, 1);
             tacka b = new tacka(3, 1);
             tacka c = new tacka(3, 5);
-            tacka d = new tacka(1, 2);
+            tacka d = new tacka(1, 5);
 
             vektor AB = new vektor(a, b);
             vektor CD = new vektor(c, d);
@@ -57,7 +57,11 @@ namespace CupacPoligon
             double bc_len = BC.duzina();
             double cd_len = CD.duzina();
             double da_len = DA.duzina();
+
+            tacka[] temena = { a, b, c, d };
+            int br_temena = temena.Length;
             
+
             if ((ab_len == bc_len) && (bc_len == cd_len) && (cd_len == da_len))
                 if (vektor.SP(AB, BC) == 0)
                     Console.WriteLine("jeste kvadrat");
@@ -106,6 +110,22 @@ namespace CupacPoligon
             {
                 Console.WriteLine("Nije pravougli trapez");
             }
+            double plus = 0;
+            double minus = 0;
+            for (int i = 0; i < br_temena; i++)
+            {
+                double x1 = temena[i].x;
+                double y1 = temena[i].y;
+                double x2 = temena[(i + 1) % br_temena].x;
+                double y2 = temena[(i + 1) % br_temena].y;
+                plus += x1 * y2;
+                minus += y1 * x2;
+            }
+
+            double povrsina = Math.Abs((plus - minus) / 2.0);
+
+            Console.WriteLine("Površina je: " + povrsina);
         }
     }
+    
 }

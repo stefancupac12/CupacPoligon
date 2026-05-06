@@ -115,7 +115,6 @@ namespace CupacPoligon
         }
         public double povrsina()
         {
-            {
                 double plus = 0;
                 double minus = 0;
                 for (int i = 0; i < br_temena; i++)
@@ -124,7 +123,6 @@ namespace CupacPoligon
                     minus += teme[i].y * teme[(i + 1) % br_temena].x;
                 }
                 return Math.Abs(plus - minus) / 2;
-            }
 
         }
     }
